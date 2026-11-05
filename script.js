@@ -1,5 +1,6 @@
 // Cosmopings website interactions
-document.getElementById("year").textContent = new Date().getFullYear();
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
 
-// Add real Discord invite, support server, and documentation URLs here
-// when those links exist. The current site intentionally contains no fake links.
+// The status panel intentionally reports an unconfigured heartbeat.
+// Connect a real, public status endpoint before displaying online/offline claims.
