@@ -54,8 +54,8 @@
     </section>
 
     <section class="signal-section wrap" id="signal">
-      <div class="signal-heading"><div><div class="eyebrow">LIVE TELEMETRY / 00</div><h2>Mission <em>control.</em></h2><p>A little window into the Cosmopings signal network.</p></div><span class="signal-tag"><i></i> STATUS FEED NOT CONNECTED</span></div>
-      <div class="control-panel"><div class="control-top"><span><b class="control-dot"></b> COSMOPINGS // SIGNAL MONITOR</span><span class="mono">MONITOR PREVIEW · NOT LIVE DATA</span></div><div class="control-main"><div class="radar"><div class="radar-ring ring-a"></div><div class="radar-ring ring-b"></div><div class="radar-ring ring-c"></div><div class="radar-sweep"></div><span class="radar-center">✦</span><i class="radar-blip blip-a"></i><i class="radar-blip blip-b"></i></div><div class="control-copy"><div class="status-line"><span class="status-label">BOT PRESENCE</span><span class="status-value"><i></i> Awaiting heartbeat</span></div><h3>The signal is<br><em>standing by.</em></h3><p>This website is a static GitHub Pages site, so it cannot verify whether the bot process is currently online. Connect a heartbeat endpoint later to turn this panel into a real status monitor.</p><div class="status-meta"><span>UPTIME <b>—</b></span><span>LAST PING <b>—</b></span><span>REGION <b>UNSET</b></span></div></div></div><div class="control-bottom"><span>✦ SIGNAL LINK: NOT CONFIGURED</span><span>NO STATUS CLAIMS ARE MADE</span></div></div>
+      <div class="signal-heading"><div><div class="eyebrow">LIVE TELEMETRY / 00</div><h2>Mission <em>control.</em></h2><p>A little window into the Cosmopings signal network.</p></div><span class="signal-tag" id="signal-tag"><i></i> CONNECTING TO BOT</span></div>
+      <div class="control-panel"><div class="control-top"><span><b class="control-dot"></b> COSMOPINGS // SIGNAL MONITOR</span><span class="mono" id="monitor-caption">LIVE TELEMETRY · CHECKING</span></div><div class="control-main"><div class="radar"><div class="radar-ring ring-a"></div><div class="radar-ring ring-b"></div><div class="radar-ring ring-c"></div><div class="radar-sweep"></div><span class="radar-center">✦</span><i class="radar-blip blip-a"></i><i class="radar-blip blip-b"></i></div><div class="control-copy"><div class="status-line"><span class="status-label">BOT PRESENCE</span><span class="status-value" id="bot-presence"><i></i> Connecting…</span></div><h3 id="signal-headline">Checking the<br><em>signal…</em></h3><p id="signal-description">Connecting to Cosmopings’ live status endpoint. The panel will show the latest heartbeat when the bot host responds.</p><div class="status-meta"><span>UPTIME <b id="bot-uptime">—</b></span><span>LATENCY <b id="bot-latency">—</b></span><span>VIDEOS TRACKED <b id="bot-posted">—</b></span></div></div></div><div class="control-bottom"><span id="signal-link">✦ SIGNAL LINK: INITIALIZING</span><span id="last-check">WAITING FOR FIRST RESPONSE</span></div></div>
     </section>
 
     <section class="section wrap" id="features">
@@ -116,13 +116,20 @@
         <p>Give every new cover and livestream a place to land in your Discord community.</p>
         <a class="button button-primary" href="https://github.com/palmtreepaniko/cosmopings" target="_blank" rel="noopener">Explore on GitHub <span>↗</span></a>
         <div class="closing-foot">COSMOPINGS <span>·</span> YOUTUBE × DISCORD</div>
-        <div class="faq-mini"><details><summary>Does this website show real bot uptime?</summary><p>Not yet. The status panel is a preview until a real heartbeat endpoint is connected.</p></details><details><summary>Can I use the project as a starting point?</summary><p>Yes. Visit the bot repository to explore the source and create your own customized version.</p></details><details><summary>Does GitHub Pages run the bot?</summary><p>No. GitHub Pages hosts this static website. The bot runs separately on its own hosting environment.</p></details></div>
+<div class="faq-mini">
+          <details><summary>What does Cosmopings do?</summary><p>Cosmopings watches a configured YouTube channel for new covers and livestreams, detects the content type, and sends updates to dedicated Discord channels.</p></details>
+          <details><summary>Does the status panel show the real bot status?</summary><p>Yes. It checks the bot host's public status API. If the host cannot be reached, the panel reports the connection as unavailable instead of claiming the bot is online.</p></details>
+          <details><summary>Does this website host the Discord bot?</summary><p>No. GitHub Pages hosts this website. The bot runs separately on its hosting service, and this page reads its public status endpoint.</p></details>
+          <details><summary>Can I customize my own Cosmopings?</summary><p>Yes. The bot source is public, so you can explore the code, fork the repository, and adapt it for your own server and YouTube channel.</p></details>
+          <details><summary>How are covers and livestreams separated?</summary><p>Cosmopings uses configured keywords, hashtags, and YouTube live-broadcast information to classify content before sending a notification.</p></details>
+          <details><summary>Where can I report an issue or get in touch?</summary><p>Contact the project owner on Discord: <strong>palmtree_panik</strong>.</p></details>
+        </div>
 
       </div>
     </section>
   </main>
 
-  <footer class="footer wrap"><a class="brand" href="#"><span class="brand-mark"><span></span><span></span><span></span></span><span>cosmopings<span class="brand-dot">.</span></span></a><span>Made for the moments worth sharing. <a href="https://github.com/palmtreepaniko/cosmopings" target="_blank" rel="noopener">Source ↗</a></span><span class="footer-right">© <span id="year"></span> COSMOPINGS</span></footer>
+  <footer class="footer wrap"><a class="brand" href="#"><span class="brand-mark"><span></span><span></span><span></span></span><span>cosmopings<span class="brand-dot">.</span></span></a><span>Contact: <strong class="discord-contact">palmtree_panik</strong> · <a href="https://github.com/palmtreepaniko/cosmopings" target="_blank" rel="noopener">Bot source ↗</a></span><span class="footer-right">© 2026 COSMOPINGS — ALL RIGHTS RESERVED. <span class="credit">A project by palmtreepaniko.</span></span></footer>
   <script src="script.js"></script>
 </body>
 </html>
